@@ -10,7 +10,7 @@
 ![Alura](https://img.shields.io/badge/Oracle%20ONE-Alura-0A3871)
 
 
-## **Análise de Churn** é um projeto de Data Science desenvolvido para investigar os fatores associados à evasão de clientes de uma empresa de telecomunicações.
+## ***Análise de Churn*** é um projeto de Data Science desenvolvido para investigar os fatores associados à evasão de clientes de uma empresa de telecomunicações.
 
 A solução utiliza **Python e análise exploratória de dados (EDA)** para extrair, transformar e analisar informações provenientes de uma API, identificando padrões relacionados ao comportamento dos clientes e gerando insights que podem apoiar estratégias de retenção.
 O projeto foi desenvolvido durante a **Tech Foundation — Especialização Data Science**, integrante do programa **Oracle Next Education (ONE) G9 BR / Alura**.
