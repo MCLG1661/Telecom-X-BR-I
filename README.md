@@ -207,7 +207,7 @@ Uma futura versão pode utilizar modelos de classificação para estimar a proba
 
 ---
 
-## ➡️ Continuação:** Telecom X II — Predição de Churn com Machine Learning
+## ➡️ Continuação: ** Telecom X II — Predição de Churn com Machine Learning**
 
 ---
 
