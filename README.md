@@ -17,102 +17,201 @@ O projeto foi desenvolvido durante a **Tech Foundation — Especialização Data
 
 ---
 
-## 📌 Objetivo
+## 🎯 Objetivo
 
-Utilizando Python e suas principais bibliotecas, coletar, tratar e analisar dados, extraindo insights valiosos para que os demais colegas da equipe de Data Science, avancem para modelos preditivos e consigam desenvolver estratégias para reduzir a evasão (Churn).
+Investigar os principais fatores associados ao **churn (evasão de clientes)** por meio de técnicas de preparação, transformação e análise de dados.
+O estudo busca transformar dados brutos em informações que possam apoiar tanto decisões de negócio quanto etapas posteriores de modelagem preditiva.
 
 ---
 
+## 💼 Problema do Negócio
+
+A evasão de clientes representa um desafio relevante para empresas que operam com modelos de receita recorrente.
+Compreender quais características estão associadas a uma maior probabilidade de cancelamento permite direcionar estratégias de :
+
+- Retenção
+- Fidelização
+- Onboarding
+- Precificação
+- Cross-selling
+- Gestão do relacionamento com clientes
+
+O projeto utiliza análise de dados para identificar padrões que possam contribuir para essas decisões.
+
+---
+
+## 🔄 Pipeline de Dados
+
+```text
+API
+ ↓
+Extração dos Dados
+ ↓
+Tratamento e Padronização
+ ↓
+ETL
+ ↓
+Análise Exploratória
+ ↓
+Análise de Churn
+ ↓
+Correlação entre Variáveis
+ ↓
+Visualizações
+ ↓
+Insights
+ ↓
+Recomendações de Negócio
+
+```
+
+---
+
+##🔬 Etapas do Projeto
+
+1. Extração
+
+Importação dos dados provenientes da fonte disponibilizada para o desafio.
+
+2. Transformação
+
+Preparação dos dados para análise, incluindo :
+
+- Tratamento de inconsistências
+- Padronização das informações
+- Conversão de tipos
+- Preparação das variáveis
+- Criação de atributos necessários às análises
+
+3. Análise Exploratória
+
+Exploração estatística e visual das principais características da base.
+
+4. Análise de Churn
+
+Comparação do comportamento de clientes que permaneceram com aqueles que deixaram a empresa.
+
+5. Correlação
+
+Investigação das relações existentes entre diferentes características dos clientes e a evasão.
+
+6. Business Insights
+
+Transformação dos resultados analíticos em hipóteses e recomendações aplicáveis ao negócio.
+
+---
+
+## 📊 Principais Insights
+
+📉 Churn da base
+
+A análise identificou churn de aproximadamente 26% dos clientes, indicando também a necessidade de atenção ao desbalanceamento da variável-alvo em uma eventual etapa de Machine Learning.
+
+📃 Tipo de contrato
+
+Clientes com contratos Month-to-month apresentam maior incidência de churn quando comparados aos contratos de maior duração.
+
+⏳ Tempo de relacionamento
+
+Clientes com menor tenure concentram uma parcela relevante da evasão, indicando que os primeiros meses do relacionamento merecem atenção especial.
+
+💰 Custo mensal
+
+Foi observada uma tendência de maior churn entre clientes com valores mensais mais elevados, sugerindo possível sensibilidade a preço.
+
+📦 Quantidade de serviços
+
+Clientes que utilizam maior quantidade de serviços apresentam menor ocorrência de churn, indicando uma possível relação entre engajamento e retenção.
+
+---
+
+💡 Recomendações de Negócio
+
+A partir dos padrões identificados, algumas estratégias podem ser investigadas:
+
+Fortalecer ações de onboarding nos primeiros meses
+Desenvolver estratégias de migração de contratos mensais para planos de maior duração
+Avaliar a percepção de valor dos clientes com mensalidades mais elevadas
+Incentivar a contratação de serviços complementares
+Criar estratégias segmentadas de retenção para grupos com maior incidência de churn
+
+Essas recomendações devem ser interpretadas como hipóteses orientadas pelos dados e validadas antes de sua implementação.
+
+---
 
 ## 🛠️ Tecnologias Utilizadas
 
-![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python&logoColor=white)
-![Google Colab](https://img.shields.io/badge/Google%20Colab-Notebook-yellow?logo=googlecolab&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-purple?logo=pandas&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-orange?logo=matplotlib&logoColor=white)
-![Seaborn](https://img.shields.io/badge/Seaborn-Statistical%20Plots-teal?logo=seaborn&logoColor=white)
+**Python** - Processamento e análise
+**Pandas** - Manipulação e transformação dos dados
+**NumPy** -	Operações numéricas
+**Matplotlib**	- Visualização de dados
+**Seaborn**	- Visualizações estatísticas
+**Google Colab / Jupyter** -	Desenvolvimento e execução do notebook
+**API / JSON** -	Fonte e estrutura dos dados
 
 ---
 
 ## 📂 Estrutura do Projeto
 
-telecomx-churn/
-├── README.md
-├── requirements.txt
-├── .gitignore
-├── data/
-│   ├── raw/                  # dados originais (não editar)
-│   │   └── TelecomX_Data.json
-│   ├── interim/              # dados parcialmente processados (opcional)
-│   └── processed/            # dataset final pronto para modelagem
-│       └── telecomx_limpo.csv
-├── notebooks/
-│   ├── 01_data_loading.ipynb         # ETAPA 1-4: extração, limpeza inicial
-│   ├── 02_data_cleaning_etl.ipynb    # ETAPA 4B e 5 (ajustes, Contas_Diarias)
-│   ├── 03_eda.ipynb                  # ETAPA 6-8: análise descritiva e gráficos
-│   └── 04_correlation_and_insights.ipynb  # ETAPA 9-10: correlações e conclusões
-├── src/
-│   ├── __init__.py
-│   ├── data.py               # funções para carregar / salvar / transformar
-│   ├── cleaning.py           # funções reutilizáveis de limpeza e padronização
-│   ├── features.py           # funções de feature engineering (Contas_Diarias, bins)
-│   └── viz.py                # funções que geram gráficos (reutilizáveis)
-├── reports/
-│   ├── figures/              # imagens geradas (png) para README ou relatório
-│   └── final_report.md       # relatório sumarizado (pode ser movido pro README)
-├── docs/
-│   └── data_dictionary.md    # dicionário de dados e definições das colunas
-├── tests/                    # testes unitários (opcional mas recomendado)
-│   └── test_data.py
-└── notebooks_export/         # versões exportadas (html/pdf) dos notebooks
+```text
+
+Telecom-X-BR/
+│
+├── Telecom_X_BR.ipynb
+└── README.md
+
+```
 
 ---
 
-## 💡 Etapas do Projeto :
+## 💡 Competências Demonstradas
 
-1. Importação e carga dos dados
-2. Limpeza e padronização
-3. Análise Descritiva
-4. Análise do Churn
-5. Matriz de Correlação
-6. ETAPA EXTRA — Análise Avançada de Correlação
-7. Conclusões
-8. Ações recomendadas
-
----
-
-## 📊 Visualizações & Insights :
-
-1. Distribuição do Churn — Proporção de clientes que permaneceram vs. saíram.
-Insight: 26% da base churnou; variável desbalanceada, exige cuidado nas métricas de modelo. 
-2. Churn por Tipo de Contrato — Comparação de taxas de evasão entre Month-to-month, One year, Two year.
-Insight: Contratos Month-to-month apresentam a maior taxa de churn — fidelização reduz evasão.
-3. Tenure x Churn (Boxplot) — Distribuição do tempo de permanência por grupo (churn/no churn).
-Insight: Clientes com tenure baixo concentram a maior parte do churn — onboarding crítico nos primeiros meses.
-4. Custo Mensal x Churn (Boxplot) — Comparação do ticket médio mensal entre quem ficou e quem saiu.
-Insight: Existe tendência de churn maior entre clientes com Custo Mensal elevado — sensibilidade a preço.
-5. Total de Serviços Contratados x Churn — Quantos addons/serviços cada cliente usa vs. churn.
-Insight: Maior número de serviços = menor churn. Engajamento por serviços protege contra evasão.
+- Data Science
+- Data Analytics
+- ETL
+- Exploratory Data Analysis (EDA)
+- Python
+- Pandas
+- Data Cleaning
+- Data Transformation
+- Data Visualization
+- Análise de correlação
+- Customer Churn Analysis
+- Business Analytics
+- Data-Driven Decision Making
 
 ---
 
-## 📎 Como Executar o Projeto
+## 🚀 Próxima Etapa
 
-Instale as dependências:
+A análise exploratória estabelece a base para uma evolução natural do projeto:
 
-pip install pandas matplotlib seaborn
+```text
+EDA
+ ↓
+Feature Engineering
+ ↓
+Preparação dos Dados
+ ↓
+Machine Learning
+ ↓
+Predição de Churn
+ ↓
+Avaliação do Modelo
+ ↓
+Identificação de Clientes de Risco
 
+```
 
-Abra o notebook:
-
-jupyter notebook
-
-Execute as células na ordem.
+Uma futura versão pode utilizar modelos de classificação para estimar a probabilidade de churn e apoiar estratégias preventivas de retenção.
 
 ---
 
-## 📬 Contato
+👨‍💻 Autor
 
-Projeto desenvolvido por Marcus  
-📧 Email: [mclguedes@gmail.com]  
-📱 LinkedIn: [https://www.linkedin.com/in/marcusguedes]
+Marcus Guedes
+
+Marketing | Data Science | Inteligência Artificial | Gestão de Projetos
+
+GitHub: MCLG1661
+LinkedIn: Marcus Guedes
