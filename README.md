@@ -116,23 +116,33 @@ Transformação dos resultados analíticos em hipóteses e recomendações que p
 
 ## 📊 Principais Insights
 
-### 📉 Churn da base
+### Distribuição de Churn
 
-A análise identificou **churn de aproximadamente 26% dos clientes**.
+![Distribuição de clientes por churn](images/churn_distribution.png)
 
-Esse resultado também indica a necessidade de atenção ao desbalanceamento da variável-alvo em uma eventual etapa de Machine Learning.
+A análise identificou uma **taxa geral de churn de 25,7%**, com 1.869 clientes que cancelaram o serviço entre os 7.267 registros analisados. O resultado evidencia uma parcela relevante da base sujeita à evasão e reforça a necessidade de identificar os segmentos de maior risco.
 
-### 📃 Tipo de contrato
+### Churn por Tipo de Contrato
 
-Clientes com contratos **Month-to-month** apresentam maior incidência de churn quando comparados aos clientes com contratos de maior duração.
+![Taxa de churn por tipo de contrato](images/churn_by_contract.png)
 
-Esse comportamento sugere que o tipo de contrato pode representar uma variável relevante para estratégias de retenção.
+O tipo de contrato apresenta uma das diferenças mais expressivas da análise. Clientes com **contrato mensal registram churn de 41,3%**, enquanto contratos de **1 ano apresentam 10,9%** e contratos de **2 anos apenas 2,8%**.
 
-### ⏳ Tempo de relacionamento
+Esse comportamento sugere forte associação entre **maior compromisso contratual e retenção**, tornando clientes de contratos mensais um segmento prioritário para estratégias de fidelização.
 
-Clientes com **menor tenure** concentram uma parcela relevante da evasão.
+### Churn por Tempo de Relacionamento
 
-O resultado indica que os primeiros meses do relacionamento podem representar um período especialmente importante para ações de onboarding e retenção.
+![Taxa de churn por tempo de relacionamento](images/churn_by_tenure.png)
+
+O churn também diminui significativamente à medida que aumenta o tempo de relacionamento com a empresa:
+
+- **0–12 meses:** 45,8%
+- **13–24 meses:** 28,1%
+- **25–48 meses:** 19,7%
+- **49–60 meses:** 14,0%
+- **61+ meses:** 6,4%
+
+Os dados indicam que **os primeiros meses da jornada do cliente representam o período de maior risco de evasão**. Isso aponta para a importância de estratégias de onboarding, acompanhamento inicial e ações preventivas de retenção.
 
 ### 💰 Custo mensal
 
