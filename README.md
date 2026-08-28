@@ -114,7 +114,7 @@ Transformação dos resultados analíticos em hipóteses e recomendações que p
 
 ---
 
-## 📊 Principais Insights
+## 📊 Principais Resultados
 
 ### Distribuição de Churn
 
@@ -143,6 +143,28 @@ O churn também diminui significativamente à medida que aumenta o tempo de rela
 - **61+ meses:** 6,4%
 
 Os dados indicam que **os primeiros meses da jornada do cliente representam o período de maior risco de evasão**. Isso aponta para a importância de estratégias de onboarding, acompanhamento inicial e ações preventivas de retenção.
+
+---
+
+## 📊 Principais Insights
+
+### 📉 Churn da base
+
+A análise identificou **churn de aproximadamente 26% dos clientes**.
+
+Esse resultado também indica a necessidade de atenção ao desbalanceamento da variável-alvo em uma eventual etapa de Machine Learning.
+
+### 📃 Tipo de contrato
+
+Clientes com contratos **Month-to-month** apresentam maior incidência de churn quando comparados aos clientes com contratos de maior duração.
+
+Esse comportamento sugere que o tipo de contrato pode representar uma variável relevante para estratégias de retenção.
+
+### ⏳ Tempo de relacionamento
+
+Clientes com **menor tenure** concentram uma parcela relevante da evasão.
+
+O resultado indica que os primeiros meses do relacionamento podem representar um período especialmente importante para ações de onboarding e retenção.
 
 ### 💰 Custo mensal
 
