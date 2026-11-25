@@ -272,7 +272,9 @@ A próxima etapa pode utilizar modelos de classificação para estimar a probabi
 
 O **Telecom X BR II** representa a evolução do estudo exploratório para uma abordagem de **Machine Learning**, utilizando os conhecimentos obtidos nesta primeira etapa como base para construção e avaliação de modelos preditivos.
 
-> O link para a continuação pode ser incluído aqui quando o repositório correspondente estiver disponível ou validado.
+[Acessar Telecom X BR II — Predição de Churn com Machine Learning](https://github.com/MCLG1661/Telecom-X-BR-II)
+
+A segunda etapa exclui 224 registros sem target válido, utilizando 7.043 registros na modelagem. Por isso, a taxa de churn da análise exploratória e a taxa da base supervisionada possuem denominadores distintos.
 
 ---
 
