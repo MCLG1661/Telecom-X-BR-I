@@ -120,13 +120,13 @@ Transformação dos resultados analíticos em hipóteses e recomendações que p
 
 ![Distribuição de clientes por churn](images/churn_distribution.png)
 
-A análise identificou uma **taxa geral de churn de 25,7%**, com 1.869 clientes que cancelaram o serviço entre os 7.267 registros analisados. O resultado evidencia uma parcela relevante da base sujeita à evasão e reforça a necessidade de identificar os segmentos de maior risco.
+A análise identificou uma **taxa geral de churn de 26,5%**, com 1.869 cancelamentos entre 7.043 clientes com rótulo conhecido. A fonte contém 7.267 registros, dos quais 224 não informam o status de churn. O resultado evidencia uma parcela relevante da base sujeita à evasão e reforça a necessidade de identificar os segmentos de maior risco.
 
 ### Churn por Tipo de Contrato
 
 ![Taxa de churn por tipo de contrato](images/churn_by_contract.png)
 
-O tipo de contrato apresenta uma das diferenças mais expressivas da análise. Clientes com **contrato mensal registram churn de 41,3%**, enquanto contratos de **1 ano apresentam 10,9%** e contratos de **2 anos apenas 2,8%**.
+O tipo de contrato apresenta uma das diferenças mais expressivas da análise. Clientes com **contrato mensal registram churn de 42,7%**, enquanto contratos de **1 ano apresentam 11,3%** e contratos de **2 anos apenas 2,8%**.
 
 Esse comportamento sugere forte associação entre **maior compromisso contratual e retenção**, tornando clientes de contratos mensais um segmento prioritário para estratégias de fidelização.
 
@@ -136,11 +136,11 @@ Esse comportamento sugere forte associação entre **maior compromisso contratua
 
 O churn também diminui significativamente à medida que aumenta o tempo de relacionamento com a empresa:
 
-- **0–12 meses:** 45,8%
-- **13–24 meses:** 28,1%
-- **25–48 meses:** 19,7%
-- **49–60 meses:** 14,0%
-- **61+ meses:** 6,4%
+- **0–12 meses:** 47,4%
+- **13–24 meses:** 28,7%
+- **25–48 meses:** 20,4%
+- **49–60 meses:** 14,4%
+- **61+ meses:** 6,6%
 
 Os dados indicam que **os primeiros meses da jornada do cliente representam o período de maior risco de evasão**. Isso aponta para a importância de estratégias de onboarding, acompanhamento inicial e ações preventivas de retenção.
 
@@ -150,7 +150,7 @@ Os dados indicam que **os primeiros meses da jornada do cliente representam o pe
 
 ### 📉 Churn da base
 
-A análise identificou **churn de aproximadamente 26% dos clientes**.
+A análise identificou **churn de aproximadamente 26,5% dos clientes**.
 
 Esse resultado também indica a necessidade de atenção ao desbalanceamento da variável-alvo em uma eventual etapa de Machine Learning.
 
@@ -172,9 +172,7 @@ Foi observada uma tendência de maior churn entre clientes com **valores mensais
 
 ### 📦 Quantidade de serviços
 
-Clientes que utilizam uma **maior quantidade de serviços** apresentam menor ocorrência de churn na análise realizada.
-
-O comportamento observado sugere uma possível relação entre maior engajamento com o portfólio de serviços e retenção.
+A quantidade de serviços apresentou associação linear negativa pequena com o churn. O resultado sustenta explorar a hipótese de retenção por adesão a serviços em testes específicos.
 
 ---
 
@@ -212,11 +210,12 @@ A partir dos padrões identificados, algumas iniciativas podem ser investigadas:
 ```text
 Telecom-X-BR-I/
 │
+├── images/
 ├── Telecom_X_BR.ipynb
 └── README.md
 ```
 
-O notebook concentra o fluxo analítico do projeto, desde a preparação dos dados até a geração dos insights e recomendações.
+O notebook concentra o fluxo analítico, desde a preparação dos dados até os insights e recomendações. Instale as dependências com `pip install pandas numpy matplotlib seaborn`, abra `Telecom_X_BR.ipynb` no Jupyter ou Google Colab e execute as células em ordem. O notebook baixa a fonte JSON pública.
 
 ---
 
@@ -274,7 +273,7 @@ O **Telecom X BR II** representa a evolução do estudo exploratório para uma a
 
 [Acessar Telecom X BR II — Predição de Churn com Machine Learning](https://github.com/MCLG1661/Telecom-X-BR-II)
 
-A segunda etapa exclui 224 registros sem target válido, utilizando 7.043 registros na modelagem. Por isso, a taxa de churn da análise exploratória e a taxa da base supervisionada possuem denominadores distintos.
+A análise exploratória e a segunda etapa usam a mesma regra para o rótulo de churn: são elegíveis os 7.043 registros com status conhecido.
 
 ---
 
